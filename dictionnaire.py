@@ -66,3 +66,35 @@ for mountain in mountains.values():
 for mountain, elevation in sorted(mountains.items()):
     print("%s is %s tall." % (mountain, elevation))
     
+#%%
+# Mountain Heights 3
+mountains_feet = {"Mount Everest": [8848, 29029],
+                  "Mont Blanc": [4810,15781],
+                  "Gasherbrum III": [7952, 26089],
+                  "Aconcagua": [6962, 22841],
+                  "Mount Logan": [5959, 19551]}
+for mountain in mountains_feet:
+    print(mountain)
+for mountain in mountains_feet.values():
+    print(str(mountain[0]) + " meters")
+for mountain in mountains_feet.values():
+    print(str(mountain[1]) + " feet")
+for mountain in mountains_feet:
+    print("%s is %d meters tall, or %d feet." % (mountain, mountains_feet[mountain][0], mountains_feet[mountain][1]))
+
+#%%
+# Mountain Heights 4
+mountains = {"Mount Everest": {"elevation": 8848, "range": "himalaya"},
+             "Mont Blanc": {"elevation": 4810, "range": "alps"},
+             "Gasherbrum III": {"elevation": 7952, "range": "karakoram"},
+             "Aconcagua": {"elevation": 6962, "range": "andes"},
+             "Mount Logan": {"elevation": 5959, "range": "saint elias mountains"}}
+for mountain in mountains:
+    print(mountain)
+for mountain_info in mountains.values():
+    print(mountain_info["elevation"])
+for mountain_info in mountains.values():
+    print(mountain_info["range"])
+for mountain in mountains:
+    print("%s is %d meters tall mountain in the %s range." % (mountain, mountains[mountain]["elevation"], mountains[mountain]["range"].title() ))
+
